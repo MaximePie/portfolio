@@ -1,0 +1,16 @@
+.Home {
+  background-color: $dark;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-family: 'Montserrat', sans-serif;
+
+  &__title {
+    &-side-text {
+      color: $grey;
+      font-style: italic;
+      font-size: 0.75em;
+    }
+  }
+}
