@@ -9,7 +9,7 @@ export default function Navigation() {
    * La différence est l'url.
    */
 
-  const [selectedPath, setSelectedPath] = React.useState('/myProjects');
+  const [selectedPath, setSelectedPath] = React.useState('');
 
   return (
     <div className="Navigation">
