@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
-export default function Navigation() {
+export default function Navigation(props) {
 
   /**
    * Savoir si le lien est sélectionné.
@@ -9,7 +9,9 @@ export default function Navigation() {
    * La différence est l'url.
    */
 
-  const [selectedPath, setSelectedPath] = React.useState('');
+  const { pathname } = useLocation();
+
+  const [selectedPath, setSelectedPath] = React.useState(pathname);
 
   return (
     <div className="Navigation">

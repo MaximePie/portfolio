@@ -12,7 +12,7 @@ function Home() {
     <Router>
       <div className="Home">
         <h1 className="Home__title">Maxime Pie - <span className="Home__title-side-text">Créateur</span></h1>
-        <Navigation/>
+        <Navigation history={Router}/>
         <Switch>
           <Route path="/myProjects">
             <ProjectsList/>
