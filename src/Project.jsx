@@ -19,11 +19,15 @@ export default function Project() {
           Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !
         </p>
         <div className="Project__actions">
-          <a href="https://flashcardstorm.herokuapp.com/" className="Project__action"> Découvrez l'application</a>
+          <a href="https://flashcardstorm.herokuapp.com/" className="Project__action">
+            <i className="fas fa-search Project__action-icon"/>
+            Découvrir
+          </a>
           <a
             href="https://github.com/MaximePie/Flashcardstorm"
             className="Project__action Project__action--secondary"
           >
+            <i className="fab fa-github-alt Project__action-icon"/>
             Code source
           </a>
         </div>
@@ -32,7 +36,7 @@ export default function Project() {
         <div className="Project__image-action-container">
           <a href="https://flashcardstorm.herokuapp.com/" className="Project__image-action">
             <i className="fas fa-question-circle Project__image-action-icon"/>
-            Découvrir
+            Découvrir l'application
           </a>
         </div>
         <img src={flashcardstormImage} alt="Image de présentation de Flashcardstorm" className="Project__image"/>
