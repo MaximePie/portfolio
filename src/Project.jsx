@@ -5,7 +5,13 @@ export default function Project() {
   return (
     <div className="Project">
       <div className="Project__details">
-        <h1 className="Project__title">Flashcardstorm</h1>
+        <h1 className="Project__title">
+          Flashcardstorm
+          <span className="Project__title-badge">
+            <i className="fas fa-star Project__title-badge-icon"></i>
+            La favorite
+          </span>
+        </h1>
         <p className="Project__description">
           Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !
           Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !
