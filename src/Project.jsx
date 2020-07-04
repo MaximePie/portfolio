@@ -29,13 +29,13 @@ export default function Project() {
         </div>
       </div>
       <div className="Project__image-container">
-        <img src={flashcardstormImage} alt="Image de présentation de Flashcardstorm" className="Project__image"/>
         <div className="Project__image-action-container">
-          <a href="" className="Project__image-action">
+          <a href="https://flashcardstorm.herokuapp.com/" className="Project__image-action">
             <i className="fas fa-question-circle Project__image-action-icon"/>
             Découvrir
           </a>
         </div>
+        <img src={flashcardstormImage} alt="Image de présentation de Flashcardstorm" className="Project__image"/>
       </div>
     </div>
   );
