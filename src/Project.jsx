@@ -4,6 +4,8 @@ export default function Project(props) {
 
   const { title, description, imagePath, githubLink, applicationLink, badge } = props;
 
+  console.log(description)
+
   return (
     <div className="Project">
       <div className="Project__details">
@@ -15,13 +17,17 @@ export default function Project(props) {
           </span>
         </h1>
         <p className="Project__description">
-          {description}
+          {description.map(descriptionLine => {
+            return <p>{descriptionLine}</p>
+          })}
         </p>
         <div className="Project__actions">
-          <a href={applicationLink} className="Project__action">
-            <i className="fas fa-search Project__action-icon"/>
-            Découvrir
-          </a>
+          {applicationLink && (
+            <a href={applicationLink} className="Project__action">
+              <i className="fas fa-search Project__action-icon"/>
+              Découvrir
+            </a>
+          )}
           <a
             href={githubLink}
             className="Project__action Project__action--secondary"
@@ -33,12 +39,18 @@ export default function Project(props) {
       </div>
       <div className="Project__image-container">
         <div className="Project__image-action-container">
-          <a href={applicationLink} className="Project__image-action">
-            <i className="fas fa-question-circle Project__image-action-icon"/>
-            Découvrir l'application
-          </a>
+          {applicationLink && (
+            <a href={applicationLink} className="Project__image-action">
+              <i className="fas fa-question-circle Project__image-action-icon"/>
+              Découvrir l'application
+            </a>
+          )}
         </div>
-        <img src={imagePath} alt={"Image de présentation de " + title} className="Project__image"/>
+        <img
+          src={imagePath}
+          alt={"Image de présentation de " + title}
+          className={"Project__image " + (!applicationLink && "Project__image--no-link")}
+        />
       </div>
     </div>
   );

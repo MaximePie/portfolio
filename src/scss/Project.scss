@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 30% 1fr;
   overflow-x: hidden;
+  margin: 2em 0;
 
   &__title {
     &-badge {
@@ -38,12 +39,21 @@
 
     .Project__image {
       height: 100%;
-      filter: brightness(0.6);
-      transition: transform 200ms ease;
+      filter: brightness(0.6) blur(5px);
+      transition: transform 200ms ease, filter 200ms ease;
 
       &:hover {
         transform: scale(1.02);
-        transition: transform 200ms ease;
+        transition: transform 200ms ease, filter 200ms ease;
+        filter:brightness(0.7) blur(0px);
+      }
+
+      &--no-link {
+        filter: brightness(0.9) blur(5px);
+
+        &:hover{
+          filter: brightness(0.9) blur(0px);
+        }
       }
     }
 
