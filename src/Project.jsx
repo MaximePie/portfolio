@@ -1,30 +1,29 @@
 import React from 'react';
-import flashcardstormImage from './images/flashcarstorm.png';
 
-export default function Project() {
+export default function Project(props) {
+
+  const { title, description, imagePath, githubLink, applicationLink, badge } = props;
+
   return (
     <div className="Project">
       <div className="Project__details">
         <h1 className="Project__title">
-          Flashcardstorm
+          {title}
           <span className="Project__title-badge">
             <i className="fas fa-star Project__title-badge-icon"></i>
-            La favorite
+            {badge}
           </span>
         </h1>
         <p className="Project__description">
-          Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !
-          Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !
-          Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !
-          Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !
+          {description}
         </p>
         <div className="Project__actions">
-          <a href="https://flashcardstorm.herokuapp.com/" className="Project__action">
+          <a href={applicationLink} className="Project__action">
             <i className="fas fa-search Project__action-icon"/>
             Découvrir
           </a>
           <a
-            href="https://github.com/MaximePie/Flashcardstorm"
+            href={githubLink}
             className="Project__action Project__action--secondary"
           >
             <i className="fab fa-github-alt Project__action-icon"/>
@@ -34,12 +33,12 @@ export default function Project() {
       </div>
       <div className="Project__image-container">
         <div className="Project__image-action-container">
-          <a href="https://flashcardstorm.herokuapp.com/" className="Project__image-action">
+          <a href={applicationLink} className="Project__image-action">
             <i className="fas fa-question-circle Project__image-action-icon"/>
             Découvrir l'application
           </a>
         </div>
-        <img src={flashcardstormImage} alt="Image de présentation de Flashcardstorm" className="Project__image"/>
+        <img src={imagePath} alt={"Image de présentation de " + title} className="Project__image"/>
       </div>
     </div>
   );
