@@ -28,7 +28,15 @@ export default function Project() {
           </a>
         </div>
       </div>
-      <img src={flashcardstormImage} alt="Image de présentation de Flashcardstorm" className="Project__image"/>
+      <div className="Project__image-container">
+        <img src={flashcardstormImage} alt="Image de présentation de Flashcardstorm" className="Project__image"/>
+        <div className="Project__image-action-container">
+          <a href="" className="Project__image-action">
+            <i className="fas fa-question-circle Project__image-action-icon"/>
+            Découvrir
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

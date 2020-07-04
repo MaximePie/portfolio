@@ -1,6 +1,6 @@
 .Project {
   width: 99vw;
-  height: 100vh;
+  height: 100.1vh;
   display: grid;
   grid-template-columns: 35% 1fr;
   overflow-x: hidden;
@@ -32,9 +32,47 @@
     }
   }
 
-  &__image {
-    height: 100%;
-    filter: brightness(0.6);
+  &__image-container {
+    overflow: hidden;
+    position: relative;
+
+    .Project__image {
+      height: 100%;
+      filter: brightness(0.6);
+      transition: transform 200ms ease;
+
+      &:hover {
+        transform: scale(1.02);
+        transition: transform 200ms ease;
+      }
+    }
+
+    .Project__image-action-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 2em;
+      transform: translate(-50%, -50%);
+
+
+      .Project__image-action-icon {
+        margin: 8px 0;
+      }
+
+      .Project__image-action {
+        color: $white;
+        text-decoration: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &:hover {
+          transition: box-shadow 250ms ease;
+        }
+      }
+    }
   }
 
   &__actions {
