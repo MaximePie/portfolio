@@ -26,7 +26,7 @@
     padding: 8px;
     background: $white;
     color: $dark;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
     .Project__description {
       line-height: 2em;
@@ -45,13 +45,13 @@
       &:hover {
         transform: scale(1.02);
         transition: transform 200ms ease, filter 200ms ease;
-        filter:brightness(0.7) blur(0px);
+        filter: brightness(0.7) blur(0px);
       }
 
       &--no-link {
         filter: brightness(0.9) blur(5px);
 
-        &:hover{
+        &:hover {
           filter: brightness(0.9) blur(0px);
         }
       }
@@ -86,7 +86,8 @@
 
       &:hover ~ .Project__image {
         transform: scale(1.02);
-        transition: transform 200ms ease;
+        filter: brightness(0.7) blur(0px);
+        transition: transform 200ms ease, filter 200ms ease;
       }
     }
   }

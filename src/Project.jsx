@@ -4,8 +4,6 @@ export default function Project(props) {
 
   const { title, description, imagePath, githubLink, applicationLink, badge } = props;
 
-  console.log(description)
-
   return (
     <div className="Project">
       <div className="Project__details">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './scss/_scss.scss';
 
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import ProjectsList from "./ProjectsList"
 import CoursesList from "./CoursesList"
