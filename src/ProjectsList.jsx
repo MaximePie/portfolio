@@ -11,10 +11,11 @@ export default function ProjectsList() {
       <Project
         title="Flashcardstorm"
         description={[
-          "Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !",
-          "Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !",
-          "Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer ! ",
-          "Redécouvrez l'apprentissage avec cette appli révolutionnaire, vous allez adorer !"
+          "Application de révision par répétition espacée",
+          "Méthode des flashcards",
+          "Sans effort et varié, idéal pour la mémorisation à long terme",
+          "Connaissance partagée entre les utilisateurs",
+          "Amélioration continue",
         ]}
         applicationLink="https://flashcardstorm.herokuapp.com/"
         badge="La favorite"
@@ -24,11 +25,10 @@ export default function ProjectsList() {
       <Project
         title="EducHub GIPSI"
         description={[
-          "Boîte à outils indispensable pour libérer son cerveau et se réconcillier avec l'éducation.",
-          "Boîte à outils indispensable pour libérer son cerveau et se réconcillier avec l'éducation.",
-          "Boîte à outils indispensable pour libérer son cerveau et se réconcillier avec l'éducation.",
-          "Boîte à outils indispensable pour libérer son cerveau et se réconcillier avec l'éducation.",
-          "Boîte à outils indispensable pour libérer son cerveau et se réconcillier avec l'éducation."
+          "Freins à l'éducation",
+          "Apprivoiser et comprendre l'ergonomie éducative",
+          "Découvrir les bonnes pratiques pédagogiques",
+          "Libérer son cerveau"
         ]}
         applicationLink="http://educhub.herokuapp.com/"
         badge="La révolutionnaire"
@@ -38,11 +38,10 @@ export default function ProjectsList() {
       <Project
         title="Sandbox Simgame"
         description={[
-          "Application TP interactif pour apprendre des bases de Symfony, Javascript, et HTML/CSS",
-          "Application TP interactif pour apprendre des bases de Symfony, Javascript, et HTML/CSS",
-          "Application TP interactif pour apprendre des bases de Symfony, Javascript, et HTML/CSS",
-          "Application TP interactif pour apprendre des bases de Symfony, Javascript, et HTML/CSS",
-          "Application TP interactif pour apprendre des bases de Symfony, Javascript, et HTML/CSS",
+          "TP interactif d'apprentissage en autonomie",
+          "HTML, CSS, Javascript, Symfony, SQL, GIT",
+          "Apprentissage en pente douce",
+          "Suivi individuels avec relecture de code",
         ]}
         applicationLink=""
         badge="L'inspirante"

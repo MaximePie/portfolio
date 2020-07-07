@@ -14,11 +14,11 @@ export default function Project(props) {
             {badge}
           </span>
         </h1>
-        <p className="Project__description">
+        <div className="Project__description">
           {description.map(descriptionLine => {
-            return <p>{descriptionLine}</p>
+            return <p className="Project__description-element">{descriptionLine}</p>
           })}
-        </p>
+        </div>
         <div className="Project__actions">
           {applicationLink && (
             <a href={applicationLink} className="Project__action">

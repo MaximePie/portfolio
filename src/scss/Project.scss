@@ -30,6 +30,11 @@
 
     .Project__description {
       line-height: 2em;
+
+      &-element {
+        margin: 4em 0;
+        font-weight: 600;
+      }
     }
   }
 
