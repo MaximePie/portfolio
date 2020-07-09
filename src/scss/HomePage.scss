@@ -1,0 +1,53 @@
+.HomePage {
+  width: 99vw;
+
+  &__section {
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+    grid-column-gap: 3em;
+
+    &-illustration {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%);
+
+        font-size: 2.25em;
+
+        transition: transform 250ms;
+
+        &:after {
+          width: 0;
+          content: '';
+          border-bottom: solid;
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+          transition: width .5s;
+        }
+
+        &:hover {
+          cursor: pointer;
+          transform: translate(-50%, -50%) scale(1.1);
+          transition: transform 250ms;
+
+          &:after {
+            width: 100%;
+            transition: width .5s;
+          }
+        }
+      }
+
+      &-image {
+        width: 100%;
+        filter: brightness(0.5);
+      }
+    }
+  }
+}

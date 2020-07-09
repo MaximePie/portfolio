@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import ProjectsList from "./ProjectsList"
 import CoursesList from "./CoursesList"
 import Navigation from "./Navigation"
+import HomePage from "./HomePage"
 
 function Home() {
   return (
@@ -31,6 +32,9 @@ function Home() {
           </Route>
           <Route path="/myCourses">
             <CoursesList/>
+          </Route>
+          <Route path={["/home", "/"]}>
+            <HomePage />
           </Route>
         </Switch>
       </div>
