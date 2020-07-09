@@ -1,12 +1,13 @@
- .HomePageSection {
+.HomePageSection {
   display: grid;
   grid-template-columns: 6fr 5fr;
   grid-column-gap: 3em;
-  margin: 8em 0;
+  margin: 4em 0;
+  padding: 2em;
 
-   &--inverted {
-     grid-template-columns: 5fr 6fr;
-   }
+  &--inverted {
+    grid-template-columns: 5fr 6fr;
+  }
 
   &__illustration {
     position: relative;

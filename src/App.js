@@ -16,22 +16,16 @@ function Home() {
   return (
     <Router>
       <div className="Home">
-        <h1
-          className={"Home__title " + (document.location.pathname === '/' ? 'Home__title--delayed' : '')}
-        >
-          <a href="/home" className="Home__title-link">
-            Maxime Pie - <span className="Home__title-side-text">Créateur</span>
-          </a>
-        </h1>
-        {document.location.pathname === '/' && (
-          <div className="Home__title--hero-container">
-            <h1 className="Home__title Home__title--hero">
+        <div className="Home__header">
+          <h1
+            className="Home__title"
+          >
+            <a href="/" className="Home__title-link">
               Maxime Pie - <span className="Home__title-side-text">Créateur</span>
-              <div className="Home__title--hero-hide"/>
-            </h1>
-          </div>
-        )}
-        <Navigation history={Router}/>
+            </a>
+          </h1>
+          <Navigation history={Router}/>
+        </div>
         <Switch>
           <Route path="/myProjects">
             <ProjectsList/>
@@ -39,7 +33,7 @@ function Home() {
           <Route path="/myCourses">
             <CoursesList/>
           </Route>
-          <Route path={["/home", "/"]}>
+          <Route path="/">
             <HomePage />
           </Route>
         </Switch>

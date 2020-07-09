@@ -1,16 +1,16 @@
 export const bubbleParticles = {
   "particles": {
     "number": {
-      "value": 160,
+      "value": 2,
       "density": {
         "enable": false
       }
     },
     "size": {
-      "value": 3,
+      "value": 5,
       "random": true,
       "anim": {
-        "speed": 4,
+        "speed": 1,
         "size_min": 0.3
       }
     },
@@ -19,7 +19,7 @@ export const bubbleParticles = {
     },
     "move": {
       "random": true,
-      "speed": 1,
+      "speed": 0.5,
       "direction": "top",
       "out_mode": "out"
     }

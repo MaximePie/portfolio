@@ -16,9 +16,9 @@ export default function Navigation(props) {
   return (
     <div className="Navigation">
       <Link
-        to="/home"
-        className={"Navigation__link " + (selectedPath === '/home' ? "Navigation__link--selected" : "")}
-        onClick={() => {setSelectedPath('/home')}}
+        to="/"
+        className={"Navigation__link " + (selectedPath === '/' ? "Navigation__link--selected" : "")}
+        onClick={() => {setSelectedPath('/')}}
       >
         Accueil
       </Link>
