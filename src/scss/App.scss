@@ -46,6 +46,11 @@
       transform: translateY(-10vh);
       animation: slideIn 250ms ease-in-out forwards 6s;
     }
+
+    &-link {
+      text-decoration: none;
+      color: $white;
+    }
   }
 
   .Home__title--hero-container {

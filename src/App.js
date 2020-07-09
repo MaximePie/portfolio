@@ -15,7 +15,9 @@ function Home() {
         <h1
           className={"Home__title " + (document.location.pathname === '/' ? 'Home__title--delayed' : '')}
         >
-          Maxime Pie - <span className="Home__title-side-text">Créateur</span>
+          <a href="/home" className="Home__title-link">
+            Maxime Pie - <span className="Home__title-side-text">Créateur</span>
+          </a>
         </h1>
         {document.location.pathname === '/' && (
           <div className="Home__title--hero-container">

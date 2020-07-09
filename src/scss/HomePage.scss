@@ -5,11 +5,17 @@
     display: grid;
     grid-template-columns: 6fr 5fr;
     grid-column-gap: 3em;
+    margin: 3em 0;
 
     &-illustration {
       position: relative;
       border-radius: 10px;
       overflow: hidden;
+
+      &-link {
+        text-decoration: none;
+        color: $white;
+      }
 
       &-title {
         position: absolute;
@@ -48,6 +54,38 @@
         width: 100%;
         filter: brightness(0.5);
       }
+    }
+
+    &-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &-text {
+        font-size: 2em;
+      }
+
+      &-link {
+        border-radius: 100px;
+        border: none;
+        background: $darkBeige;
+        color: $dark;
+        text-decoration: none;
+        padding: 8px 16px;
+        font-size: 1.2em;
+        transition: background-color 250ms ease-in-out;
+        margin: 0 8px;
+
+        &:hover {
+          background-color: $beige;
+          transition: background-color 250ms ease-in-out;
+        }
+
+        &-icon {
+          margin: 0 8px 0 4px;
+        }
+    }
     }
   }
 }
