@@ -5,7 +5,7 @@ export default function Project(props) {
   const { title, description, imagePath, githubLink, applicationLink, badge } = props;
 
   return (
-    <div className="Project">
+    <div className="Project" data-aos="fade-up">
       <div className="Project__details">
         <h1 className="Project__title">
           {title}

@@ -1,5 +1,8 @@
 import React from 'react';
 import './scss/_scss.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
@@ -9,6 +12,7 @@ import Navigation from "./Navigation"
 import HomePage from "./HomePage"
 
 function Home() {
+  AOS.init();
   return (
     <Router>
       <div className="Home">

@@ -1,5 +1,7 @@
 import React from 'react';
 import projectsImage from './images/projects.png'
+import Particles from "react-particles-js";
+import {bubbleParticles} from './particles';
 
 export default function HomePage() {
 
@@ -13,6 +15,9 @@ export default function HomePage() {
               Mes projets
             </a>
           </h2>
+          <Particles
+            className="HomePage__section-illustration-particles"
+            params={bubbleParticles} />
         </div>
         <div className="HomePage__section-details">
           <p className="HomePage__section-details-text">Découvrez mes projets</p>
