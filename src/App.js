@@ -13,10 +13,19 @@ import HomePage from "./HomePage"
 
 function Home() {
   AOS.init();
-  const viewportWith = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+
+  const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  const [isMobile, setMobileStatus] = React.useState(viewportWidth < 1000);
+
+
+  window.onresize = () => {
+    const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    console.log(viewportWidth);
+    setMobileStatus(viewportWidth < 1000)
+  };
 
   return (
-    <viewportContext.Provider value={viewportWith < 1000}>
+    <viewportContext.Provider value={isMobile}>
       <Router>
         <div className="Home">
           <div className="Home__header">
@@ -45,5 +54,6 @@ function Home() {
     </viewportContext.Provider>
   );
 }
+
 
 export default Home;

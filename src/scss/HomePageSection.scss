@@ -82,6 +82,10 @@
 
     text-align: center;
 
+    @include for-phone-only {
+      margin: 2em 0;
+    }
+
     &-text {
       font-size: 2em;
     }

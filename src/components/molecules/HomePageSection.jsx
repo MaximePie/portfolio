@@ -1,9 +1,13 @@
 import React from 'react';
 import Particles from "react-particles-js";
 import {bubbleParticles} from "../../particles";
+import {viewportContext} from "../../contexts/viewport";
 
 export default function HomePageSection(props) {
-  const {redirectPath, title, illustrationPath, text, isInverted} = props
+  const {redirectPath, title, illustrationPath, text, isInverted} = props;
+
+  const isMobile = React.useContext(viewportContext);
+
   return (
     <div className={"HomePageSection " + (isInverted ? 'HomePageSection--inverted' : '')}>
       {!isInverted && (
@@ -20,7 +24,9 @@ export default function HomePageSection(props) {
               params={bubbleParticles} />
           </div>
           <div className="HomePageSection__details">
-            <p className="HomePageSection__details-text">{text}</p>
+            {!isMobile && (
+              <p className="HomePageSection__details-text">{text}</p>
+            )}
             <a href={redirectPath} className="HomePageSection__details-link">
               <i className="fas fa-search HomePageSection__details-link-icon"/>
               Explorer
@@ -31,7 +37,9 @@ export default function HomePageSection(props) {
       {isInverted && (
         <>
           <div className="HomePageSection__details">
-            <p className="HomePageSection__details-text">{text}</p>
+            {!isMobile && (
+              <p className="HomePageSection__details-text">{text}</p>
+            )}
             <a href={redirectPath} className="HomePageSection__details-link">
               <i className="fas fa-search HomePageSection__details-link-icon"/>
               Explorer
