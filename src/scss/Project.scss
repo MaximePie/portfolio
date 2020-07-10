@@ -8,9 +8,9 @@
   color: initial;
 
   @include for-phone-only {
-    display: flex;
-    flex-direction: column;
-    height: 112vh;
+    grid-template-columns: initial;
+    grid-template-rows: 1fr 50%;
+    height: 70vh;
   }
 
   &__badge {
@@ -32,12 +32,20 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     min-width: 500px;
 
+    @include for-phone-only {
+      min-width: 0;
+    }
+
     .Project__description {
       line-height: 2em;
 
       &-element {
         margin: 2em 0;
         font-weight: 600;
+        @include for-phone-only {
+          margin: 0.6em 0;
+          font-weight: 500;
+        }
       }
     }
   }
@@ -74,6 +82,9 @@
       transform: translate(-50%, -50%);
       z-index: 1;
 
+      @include for-phone-only {
+        font-size: 1.5em;
+      }
 
       .Project__image-action-icon {
         margin: 8px 0;
@@ -108,6 +119,10 @@
     display: flex;
     justify-content: space-around;
 
+    @include for-phone-only {
+      flex-direction: column;
+    }
+
     .Project__action {
       border-radius: 100px;
       border: none;
@@ -118,6 +133,11 @@
       font-size: 1.2em;
       transition: background-color 250ms ease-in-out;
       margin: 0 8px;
+      text-align: center;
+
+      @include for-phone-only {
+        margin: 8px;
+      }
 
       &:hover {
         background-color: $beige;
