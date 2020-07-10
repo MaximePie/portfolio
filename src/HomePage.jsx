@@ -4,7 +4,10 @@ import coursesImage from './images/courses.jpg'
 import skillsImage from './images/skills.jpg'
 import HomePageSection from './components/molecules/HomePageSection';
 
+import { viewportContext } from './contexts/viewport';
+
 export default function HomePage() {
+  const isMobile = React.useContext(viewportContext);
 
   return (
     <div className="HomePage">
@@ -19,7 +22,7 @@ export default function HomePage() {
         title="Mes formations"
         illustrationPath={coursesImage}
         text="Découvrez les formations que je donne"
-        isInverted
+        isInverted={!isMobile}
       />
       <HomePageSection
         redirectPath="/mySkills"
@@ -32,7 +35,7 @@ export default function HomePage() {
         title="Mes projets"
         illustrationPath={projectsImage}
         text="Découvrez mes créations"
-        isInverted
+        isInverted={!isMobile}
       />
     </div>
   );
