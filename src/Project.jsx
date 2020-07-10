@@ -9,11 +9,11 @@ export default function Project(props) {
       <div className="Project__details">
         <h1 className="Project__title">
           {title}
-          <span className="Project__title-badge">
-            <i className="fas fa-star Project__title-badge-icon"></i>
-            {badge}
-          </span>
         </h1>
+        <span className="Project__badge">
+          <i className="fas fa-star Project__badge-icon"/>
+          {badge}
+        </span>
         <div className="Project__description">
           {description.map(descriptionLine => {
             return <p className="Project__description-element">{descriptionLine}</p>
