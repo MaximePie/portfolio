@@ -1,8 +1,11 @@
 import React from 'react';
+import Collapsible from "react-collapsible";
 
 export default function Project(props) {
 
   const { title, description, imagePath, githubLink, applicationLink, badge } = props;
+
+  const [isCollapsed, setCollapseStatus] = React.useState(false);
 
   return (
     <div className="Project" data-aos="fade-up">
@@ -14,11 +17,17 @@ export default function Project(props) {
           <i className="fas fa-star Project__badge-icon"/>
           {badge}
         </span>
-        <div className="Project__description">
-          {description.map(descriptionLine => {
-            return <p className="Project__description-element">{descriptionLine}</p>
-          })}
-        </div>
+        <Collapsible
+          trigger={isCollapsed ? "Replier" : "Afficher des détails"}
+          onOpening={() => {setCollapseStatus(true)}}
+          onClosing={() => {setCollapseStatus(false)}}
+        >
+          <div className="Project__description">
+            {description.map(descriptionLine => {
+              return <p className="Project__description-element">{descriptionLine}</p>
+            })}
+          </div>
+        </Collapsible>
         <div className="Project__actions">
           {applicationLink && (
             <a href={applicationLink} className="Project__action">

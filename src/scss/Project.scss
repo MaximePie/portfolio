@@ -36,6 +36,14 @@
       min-width: 0;
     }
 
+    .Collapsible {
+      margin-top: 16px;
+
+      .Collapsible__trigger {
+        font-weight: 600;
+      }
+    }
+
     .Project__description {
       line-height: 2em;
 
