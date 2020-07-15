@@ -13,6 +13,12 @@
     height: 70vh;
   }
 
+  &__title {
+    @include for-phone-only {
+      font-size: 1.5em;
+    }
+  }
+
   &__badge {
     padding: 4px 8px;
     border: solid;
@@ -129,7 +135,8 @@
     justify-content: space-around;
 
     @include for-phone-only {
-      flex-direction: column;
+      margin: 8px;
+      padding: 8px;
     }
   }
 }

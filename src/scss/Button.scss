@@ -12,20 +12,36 @@
   cursor: pointer;
 
   @include for-phone-only {
-    margin: 8px;
+    width: 1.5em;
+    background: none;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 4px;
   }
 
   &:hover {
     background-color: $beige;
     transition: background-color 250ms ease-in-out;
+    @include for-phone-only {
+      background: none;
+    }
   }
 
   &--secondary {
     background-color: $dark;
     color: $white;
 
+    @include for-phone-only {
+      background: none;
+      color: $dark;
+    }
+
     &:hover {
       background-color: $grey;
+
+      @include for-phone-only {
+        background: none;
+      }
     }
   }
 
