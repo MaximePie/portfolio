@@ -41,6 +41,7 @@
 
       .Collapsible__trigger {
         font-weight: 600;
+        cursor: pointer;
       }
     }
 
@@ -129,41 +130,6 @@
 
     @include for-phone-only {
       flex-direction: column;
-    }
-
-    .Project__action {
-      border-radius: 100px;
-      border: none;
-      background: $darkBeige;
-      color: $dark;
-      text-decoration: none;
-      padding: 8px 16px;
-      font-size: 1.2em;
-      transition: background-color 250ms ease-in-out;
-      margin: 0 8px;
-      text-align: center;
-
-      @include for-phone-only {
-        margin: 8px;
-      }
-
-      &:hover {
-        background-color: $beige;
-        transition: background-color 250ms ease-in-out;
-      }
-
-      &--secondary {
-        background-color: $dark;
-        color: $white;
-
-        &:hover {
-          background-color: $grey;
-        }
-      }
-
-      &-icon {
-        margin: 0 8px 0 4px;
-      }
     }
   }
 }

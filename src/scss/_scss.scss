@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+
+// Base
 @import "variable";
 @import "mixins";
+
+// Root
 @import "App";
 @import "Navigation";
-@import "Project";
+
+// Pages
 @import "HomePage";
+
+// Molecules
 @import "HomePageSection";
+@import "Project";
+
+// Atoms
+@import "Button";

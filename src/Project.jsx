@@ -1,9 +1,13 @@
 import React from 'react';
 import Collapsible from "react-collapsible";
+import {viewportContext} from "./contexts/viewport";
+import Button from './components/atoms/Button';
 
 export default function Project(props) {
 
-  const { title, description, imagePath, githubLink, applicationLink, badge } = props;
+  const isMobile = React.useContext(viewportContext);
+
+  const {title, description, imagePath, githubLink, applicationLink, badge} = props;
 
   const [isCollapsed, setCollapseStatus] = React.useState(false);
 
@@ -17,31 +21,47 @@ export default function Project(props) {
           <i className="fas fa-star Project__badge-icon"/>
           {badge}
         </span>
-        <Collapsible
-          trigger={isCollapsed ? "Replier" : "Afficher des détails"}
-          onOpening={() => {setCollapseStatus(true)}}
-          onClosing={() => {setCollapseStatus(false)}}
-        >
+        {isMobile && (
+          <Collapsible
+            trigger={isCollapsed ? "Replier" : "Afficher des détails"}
+            onOpening={() => {
+              setCollapseStatus(true)
+            }}
+            onClosing={() => {
+              setCollapseStatus(false)
+            }}
+          >
+            <div className="Project__description">
+              {description.map(descriptionLine => {
+                return <p className="Project__description-element">{descriptionLine}</p>
+              })}
+            </div>
+          </Collapsible>
+        )}
+        {!isMobile && (
           <div className="Project__description">
             {description.map(descriptionLine => {
               return <p className="Project__description-element">{descriptionLine}</p>
             })}
           </div>
-        </Collapsible>
+        )}
         <div className="Project__actions">
           {applicationLink && (
-            <a href={applicationLink} className="Project__action">
-              <i className="fas fa-search Project__action-icon"/>
-              Découvrir
-            </a>
+            <Button
+            href={applicationLink}
+            className="Project__action"
+            icon="search"
+            text="Découvrir"
+            />
           )}
-          <a
+          <Button
             href={githubLink}
-            className="Project__action Project__action--secondary"
-          >
-            <i className="fab fa-github-alt Project__action-icon"/>
-            Code source
-          </a>
+            className="Project__action"
+            icon="github-alt"
+            text="Code source"
+            variant="secondary"
+            isFabIcon
+          />
         </div>
       </div>
       <div className="Project__image-container">
