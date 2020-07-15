@@ -29,13 +29,6 @@ export default function Navigation(props) {
       >
         Mes projets
       </Link>
-      <Link
-        to="/myCourses"
-        className={"Navigation__link " + (selectedPath === '/myCourses' ? "Navigation__link--selected" : "")}
-        onClick={() => {setSelectedPath('/myCourses')}}
-      >
-        Mes formations
-      </Link>
     </div>
   );
 }

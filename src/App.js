@@ -42,9 +42,6 @@ function Home() {
             <Route path="/myProjects">
               <ProjectsList/>
             </Route>
-            <Route path="/myCourses">
-              <CoursesList/>
-            </Route>
             <Route path="/">
               <HomePage />
             </Route>
