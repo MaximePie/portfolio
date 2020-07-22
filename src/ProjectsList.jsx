@@ -2,6 +2,7 @@ import React from 'react';
 import flashcardstormImage from './images/flashcarstorm.png';
 import educhubImage from './images/educhub.jpg';
 import sandboxSimgameImage from './images/sandbox_simgame.png';
+import clientProjectImage from './images/clientsProject.jpg';
 
 import Project from './Project';
 
@@ -47,6 +48,16 @@ export default function ProjectsList() {
         badge="L'inspirante"
         githubLink="https://gitlab.com/Chatmalow/sandbox_simgame"
         imagePath={sandboxSimgameImage}
+      />
+      <Project
+        title="Votre projet ?"
+        description={[
+          "Site web ou application sur mesure",
+          "Adapté au responsive design sur tous les formats",
+        ]}
+        badge="La mystérieuse"
+        imagePath={clientProjectImage}
+        isPreview
       />
     </div>
   );

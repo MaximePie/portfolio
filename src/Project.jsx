@@ -7,7 +7,7 @@ export default function Project(props) {
 
   const isMobile = React.useContext(viewportContext);
 
-  const {title, description, imagePath, githubLink, applicationLink, badge} = props;
+  const {title, description, imagePath, githubLink, applicationLink, badge, isPreview} = props;
 
   const [isCollapsed, setCollapseStatus] = React.useState(false);
 
@@ -48,20 +48,29 @@ export default function Project(props) {
         <div className="Project__actions">
           {applicationLink && (
             <Button
-            href={applicationLink}
-            className="Project__action"
-            icon="search"
-            text="Découvrir"
+              href={applicationLink}
+              className="Project__action"
+              icon="search"
+              text="Découvrir"
             />
           )}
-          <Button
-            href={githubLink}
-            className="Project__action"
-            icon="github-alt"
-            text="Code source"
-            variant="secondary"
-            isFabIcon
-          />
+          {githubLink && (
+            <Button
+              href={githubLink}
+              className="Project__action"
+              icon="github-alt"
+              text="Code source"
+              variant="secondary"
+              isFabIcon
+            />
+          )}
+          {isPreview && (
+            <Button
+              icon="plus-circle"
+              text="Me contacter"
+              href={"/contact"}
+            />
+          )}
         </div>
       </div>
       <div className="Project__image-container">
