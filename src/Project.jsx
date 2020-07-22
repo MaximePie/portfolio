@@ -66,7 +66,7 @@ export default function Project(props) {
           )}
           {isPreview && (
             <Button
-              icon="plus-circle"
+              icon="pen"
               text="Me contacter"
               href={"/contact"}
             />
@@ -79,6 +79,12 @@ export default function Project(props) {
             <a href={applicationLink} className="Project__image-action">
               <i className="fas fa-question-circle Project__image-action-icon"/>
               Découvrir l'application
+            </a>
+          )}
+          {isPreview && (
+            <a href={"/contact"} className="Project__image-action Project__image-action--preview">
+              <i className="fas fa-play Project__image-action-icon"/>
+              Me contacter
             </a>
           )}
         </div>

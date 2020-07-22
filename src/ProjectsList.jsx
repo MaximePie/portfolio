@@ -52,8 +52,11 @@ export default function ProjectsList() {
       <Project
         title="Votre projet ?"
         description={[
+          "Vous cherchez à faire développer un projet ?",
           "Site web ou application sur mesure",
           "Adapté au responsive design sur tous les formats",
+          "Tarif complètement adapté au besoin",
+          "Demandez un devis gratuitement",
         ]}
         badge="La mystérieuse"
         imagePath={clientProjectImage}
