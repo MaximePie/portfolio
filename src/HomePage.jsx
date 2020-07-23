@@ -31,11 +31,10 @@ export default function HomePage() {
         text="Consultez mes compétences"
       />
       <HomePageSection
-        redirectPath="/myProjects"
-        title="Mes projets"
-        illustrationPath={projectsImage}
-        text="Découvrez mes créations"
+        redirectPath="/aboutMe"
+        text="Qui suis-je ?"
         isInverted={!isMobile}
+        variant="selfPresentation"
       />
     </div>
   );
