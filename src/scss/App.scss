@@ -1,6 +1,6 @@
 .Home {
   background-color: $dark;
-  min-height: 100vh;
+  min-height: $pageHeight;
   display: flex;
   flex-direction: column;
   align-items: center;

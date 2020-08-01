@@ -7,7 +7,7 @@ import { viewportContext } from './contexts/viewport'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import ProjectsList from "./ProjectsList"
-import CoursesList from "./CoursesList"
+import ContactPage from "./components/pages/ContactPage"
 import Navigation from "./Navigation"
 import HomePage from "./HomePage"
 
@@ -41,6 +41,9 @@ function Home() {
           <Switch>
             <Route path="/myProjects">
               <ProjectsList/>
+            </Route>
+            <Route path="/contact">
+              <ContactPage />
             </Route>
             <Route path="/">
               <HomePage />
