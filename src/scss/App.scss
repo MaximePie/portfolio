@@ -38,16 +38,6 @@
       color: $white;
     }
   }
-
-  .Home__title--hero-container {
-    background-color: $dark;
-    height: 100vh;
-    width: 99vw;
-    position: absolute;
-    z-index: 3;
-
-    animation: fadeOut 250ms ease-in-out forwards 5.5s;
-  }
 }
 
 @keyframes fadeInAndSlideUp {

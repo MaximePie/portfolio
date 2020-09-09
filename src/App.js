@@ -10,6 +10,7 @@ import ProjectsList from "./ProjectsList"
 import ContactPage from "./components/pages/ContactPage"
 import Navigation from "./Navigation"
 import HomePage from "./HomePage"
+import Helmet from "react-helmet";
 
 function Home() {
   AOS.init();
@@ -27,6 +28,19 @@ function Home() {
   return (
     <viewportContext.Provider value={isMobile}>
       <Router>
+        <Helmet>
+          <meta charSet="utf-8"/>
+          <link rel="icon" href="/src/images/favicon.ico"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <meta name="theme-color" content="#000000"/>
+          <meta
+            name="description"
+            content="Portfolio de Maxime Pie qui vise à présenter ses projets personnels ainsi que ses compétences de formation et ses compétences techniques"
+          />
+          <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
+          <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+          <title>Maxime Pie</title>
+        </Helmet>
         <div className="Home">
           <div className="Home__header">
             <h1
